@@ -1,0 +1,29 @@
+body {
+  font-size: $font-size;
+  font-family: $regular-font;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    font-size: $font-size + 2px;
+  }
+}
