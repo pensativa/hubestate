@@ -115,6 +115,12 @@
     }
   });
 
+  //Download files
+  $('.file').change(function() {
+    if ($(this).val() != '') $(this).prev().text('Выбрано файлов: ' + $(this)[0].files.length);
+    else $(this).prev().text('ПРИКРЕПИТЬ ФАЙЛ');
+  });
+
 
     // Phone Mask
     $('#phone').mask('+38 (000) 000 0000', {
@@ -125,6 +131,20 @@
         }
     });
     $('#userphone').mask('+38 (000) 000 0000', {
+        'translation': {
+            0: {
+                pattern: /[0-9+]/
+            }
+        }
+    });
+    $('#phone-ser').mask('+38 (000) 000 0000', {
+        'translation': {
+            0: {
+                pattern: /[0-9+]/
+            }
+        }
+    });
+    $('#ownerphone').mask('+38 (000) 000 0000', {
         'translation': {
             0: {
                 pattern: /[0-9+]/
