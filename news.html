@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Владельцам</title>
+    <title>Новости</title>
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/D-DINCondensed-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
@@ -120,8 +120,8 @@
       </div>
       <ul class="header-menu close-menu">
         <li class="header-menu__item"><a class="header-menu__link" href="about.html">О нас</a></li>
-        <li class="header-menu__item active"><a class="header-menu__link" href="owner.html">Владельцам</a></li>
-        <li class="header-menu__item"><a class="header-menu__link" href="news.html">Новости</a></li>
+        <li class="header-menu__item"><a class="header-menu__link" href="owner.html">Владельцам</a></li>
+        <li class="header-menu__item active"><a class="header-menu__link" href="news.html">Новости</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="vacancies.html">Вакансии</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="#">Вопрос/Ответ</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="#">Контакты</a></li>
@@ -157,34 +157,69 @@
     </section>
   </header>
   <main>
-    <section class="owner-form">
+    <section class="news-page page__top">
       <div class="wrapper">
-        <div class="owner-form__proposion">
-          <h1>ПРОДАДИМ И СДАДИМ ВАШУ НЕДВИЖИМОСТЬ ПО МАКСИМАЛЬНО ВЫГОДНОЙ ЦЕНЕ И В КРАТЧАЙШИЕ СРОКИ</h1>
-          <p></p>Аренда и продажа жилой, коммерческой недвижимости и домов<br>Опытные эксперты<br>Большая база клиентов премиум сегмента<br>Управление недвижимостью под ключ
-          <h2>МЫ В ПОИСКЕ ПРЕМИУМ ОБЪЕКТОВ ДЛЯ НАШИХ КЛИЕНТОВ:</h2>
-          <p></p>АРЕНДА ОТ 1000 $<br>ПРОДАЖА ОТ 100 000 $
-        </div>
-        <div class="owner-form__callback">
-          <h3>Для получения полной консультации заполните, пожалуйста, форму</h3>
-          <form class="form">
-            <label class="hidden" for="#ownername">Имя</label>
-            <input class="form__input" type="text" placeholder="ФИО*" required id="ownername">
-            <label class="hidden" for="#ownerphone">Телефон</label>
-            <input class="form__input" type="text" placeholder="+38 ___ __ ___ __ *" required id="ownerphone">
-            <label class="hidden" for="#email">E-mail</label>
-            <input class="form__input" type="text" placeholder="E-mail*" required id="email">
-            <label class="hidden" for="#text">ваше сообщение</label>
-            <textarea rows="10" placeholder="Введите ваше сообщение..." autocapitalize="none" required id="text"></textarea>
-            <input class="form__radio" type="radio" id="sell" name="owner" checked>
-            <label for="#sell">Продажа</label>
-            <input class="form__radio" type="radio" id="rent" name="owner">
-            <label for="#rent">Аренда</label>
-            <label class="button button--form form__file-label" for="file">ПРИКРЕПИТЬ ФАЙЛ</label>
-            <input class="file" id="file" type="file" name="file" placeholder="ПРИКРЕПИТЬ ФАЙЛ" multiple required>
-            <p class="lze-capcha"><img src="img/capcha.png" alt="Временная замена"></p>
-            <input class="button button--owner-form" type="submit" placeholder="ПОДАТЬ ЗАЯВКУ">
-          </form>
+        <h1 class="news__title">НОВОСТИ</h1>
+        <ul class="news__list">
+          <li class="news__item">
+            <div class="data">
+              <p class="title">Опубликовано:</p>
+              <p class="value">12.11.2021</p><img class="news__img" src="img/new-1.jpg" alt="Новость">
+            </div>
+            <h3 class="news__subtitle">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности.</h3>
+            <p class="news__text">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Таким образом начало повседневной работы по формированию позиции играет важную роль в формировании существенных финансовых и административных условий.</p><a class="button button--news" href="new.html">ЧИТАТЬ ЕЩЕ</a>
+          </li>
+          <li class="news__item">
+            <div class="data">
+              <p class="title">Опубликовано:</p>
+              <p class="value">12.11.2021</p><img class="news__img" src="img/new-2.jpg" alt="Новость">
+            </div>
+            <h3 class="news__subtitle">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности.</h3>
+            <p class="news__text">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Таким образом начало повседневной работы по формированию позиции играет важную роль в формировании существенных финансовых и административных условий.</p><a class="button button--news" href="new.html">ЧИТАТЬ ЕЩЕ</a>
+          </li>
+          <li class="news__item">
+            <div class="data">
+              <p class="title">Опубликовано:</p>
+              <p class="value">12.11.2021</p><img class="news__img" src="img/new-3.png" alt="Новость">
+            </div>
+            <h3 class="news__subtitle">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности.</h3>
+            <p class="news__text">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Таким образом начало повседневной работы по формированию позиции играет важную роль в формировании существенных финансовых и административных условий.</p><a class="button button--news" href="new.html">ЧИТАТЬ ЕЩЕ</a>
+          </li>
+          <li class="news__item">
+            <div class="data">
+              <p class="title">Опубликовано:</p>
+              <p class="value">12.11.2021</p><img class="news__img" src="img/new-1.jpg" alt="Новость">
+            </div>
+            <h3 class="news__subtitle">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности.</h3>
+            <p class="news__text">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Таким образом начало повседневной работы по формированию позиции играет важную роль в формировании существенных финансовых и административных условий.</p><a class="button button--news" href="new.html">ЧИТАТЬ ЕЩЕ</a>
+          </li>
+          <li class="news__item">
+            <div class="data">
+              <p class="title">Опубликовано:</p>
+              <p class="value">12.11.2021</p><img class="news__img" src="img/new-2.jpg" alt="Новость">
+            </div>
+            <h3 class="news__subtitle">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности.</h3>
+            <p class="news__text">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Таким образом начало повседневной работы по формированию позиции играет важную роль в формировании существенных финансовых и административных условий.</p><a class="button button--news" href="new.html">ЧИТАТЬ ЕЩЕ</a>
+          </li>
+          <li class="news__item">
+            <div class="data">
+              <p class="title">Опубликовано:</p>
+              <p class="value">12.11.2021</p><img class="news__img" src="img/new-3.png" alt="Новость">
+            </div>
+            <h3 class="news__subtitle">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности.</h3>
+            <p class="news__text">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации модели развития. Не следует, однако забывать, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Таким образом начало повседневной работы по формированию позиции играет важную роль в формировании существенных финансовых и административных условий.</p><a class="button button--news" href="new.html">ЧИТАТЬ ЕЩЕ</a>
+          </li>
+        </ul><a class="button button--load" href="#">ПОКАЗАТЬ ЕЩЕ</a>
+        <div class="pagination">
+          <div class="pagination__title">Страницы:</div>
+          <ul class="pagination__list">
+            <li class="pagination__item active"><a href="#">1</a></li>
+            <li class="pagination__item"><a href="#">2</a></li>
+            <li class="pagination__item"><a href="#">3</a></li>
+            <li class="pagination__item"><a href="#">4</a></li>
+            <li class="pagination__item"><a href="#">5</a></li>
+            <li class="pagination__item"><a href="#">6</a></li>
+          </ul>
         </div>
       </div>
     </section>

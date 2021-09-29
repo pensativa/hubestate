@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Владельцам</title>
+    <title>Работа в HUB ESTATE</title>
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/D-DINCondensed-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
@@ -120,9 +120,9 @@
       </div>
       <ul class="header-menu close-menu">
         <li class="header-menu__item"><a class="header-menu__link" href="about.html">О нас</a></li>
-        <li class="header-menu__item active"><a class="header-menu__link" href="owner.html">Владельцам</a></li>
+        <li class="header-menu__item"><a class="header-menu__link" href="owner.html">Владельцам</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="news.html">Новости</a></li>
-        <li class="header-menu__item"><a class="header-menu__link" href="vacancies.html">Вакансии</a></li>
+        <li class="header-menu__item active"><a class="header-menu__link" href="vacancies.html">Вакансии</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="#">Вопрос/Ответ</a></li>
         <li class="header-menu__item"><a class="header-menu__link" href="#">Контакты</a></li>
       </ul>
@@ -157,34 +157,55 @@
     </section>
   </header>
   <main>
-    <section class="owner-form">
+    <section class="vacancies page__top">
       <div class="wrapper">
-        <div class="owner-form__proposion">
-          <h1>ПРОДАДИМ И СДАДИМ ВАШУ НЕДВИЖИМОСТЬ ПО МАКСИМАЛЬНО ВЫГОДНОЙ ЦЕНЕ И В КРАТЧАЙШИЕ СРОКИ</h1>
-          <p></p>Аренда и продажа жилой, коммерческой недвижимости и домов<br>Опытные эксперты<br>Большая база клиентов премиум сегмента<br>Управление недвижимостью под ключ
-          <h2>МЫ В ПОИСКЕ ПРЕМИУМ ОБЪЕКТОВ ДЛЯ НАШИХ КЛИЕНТОВ:</h2>
-          <p></p>АРЕНДА ОТ 1000 $<br>ПРОДАЖА ОТ 100 000 $
+        <div class="vacancies__item">
+          <h1 class="vacancies__title">Люди и технологии – всё, что нужно, чтобы стать №1 на рынке</h1>
+          <p>Программисты, дизайнеры, иллюстраторы, копирайтеры, бухгалтеры, юристы и сотрудники департамента качества работают, чтобы каждый месяц брокеры продавали десятки объектов недвижимости.</p>
+          <p>Помимо основных направлений сформированы департаменты по продаже городских особняков, апартаментов и офисов в башнях комплекса «Москва-Сити», а также отдел по зарубежной недвижимости.</p>
         </div>
-        <div class="owner-form__callback">
-          <h3>Для получения полной консультации заполните, пожалуйста, форму</h3>
-          <form class="form">
-            <label class="hidden" for="#ownername">Имя</label>
-            <input class="form__input" type="text" placeholder="ФИО*" required id="ownername">
-            <label class="hidden" for="#ownerphone">Телефон</label>
-            <input class="form__input" type="text" placeholder="+38 ___ __ ___ __ *" required id="ownerphone">
-            <label class="hidden" for="#email">E-mail</label>
+        <div class="vacancies__item">
+          <h2 class="vacancies__title">Строго обучаем брокеров, чтобы клиенты кайфовали</h2>
+          <p>Перед тем, как попасть работать в HUB ESTATE, брокер проходит трёхэтапную систему оценки. Когда сотрудник принят, он попадает на двухнедельное обучение в нашей внутренней академии, где изучает стандарты компании в области общения и этики, архитектуру и дизайн интерьеров, клиентский сервис и качественное снятие запроса, проведение показов, а также правила взаимодействия с застройщиками.</p>
+        </div>
+        <div class="vacancies__item">
+          <h2 class="vacancies__title">В офисе, как дома</h2>
+          <p>К услугам брокеров и клиентов четыре уютные переговорные комнаты с каминами и головокружительным видом на Москву. Сотрудникам часто не хочется уходить из офиса домой. Это связано не только с уютным чилаутом для сотрудников, но и с тем, что работы много.</p>
+          <p>Хороший офис помогает нам легче находить в команду сильных брокеров и получать восторженные отзывы от клиентов и партнёров.</p>
+        </div>
+        <div class="vacancies__item">
+          <h2 class="vacancies__title">Честная комиссия</h2>
+          <p>Платим честные 30% со сделки. Не вычитаем и не хитрим при начислении. Переводим вашу сумму сразу в день поступления денег на счет компании. Задержек не бывает.</p>
+          <p>Честность и четкость – важные слова в Whitewill. Взамен мы требуем от брокера экспертности и человечности</p>
+        </div>
+        <h2 class="title-form">ОТПРАВИТЬ РЕЗЮМЕ</h2>
+        <p class="discr-form">Заполняйте форму и становитесь на шаг ближе к работе мечты.</p>
+        <div class="form owner-form__callback form-vacancies">
+          <div class="form__fh">
+            <label class="form__label" for="#vac-select">Выберите вакансию:</label>
+            <select class="form__input form__select" for="#vac-select">
+              <option>РУКОВОДИТЕЛЬ ОТДЕЛА АРЕНДЫ</option>
+              <option>МАРКЕТОЛОГ</option>
+              <option>РУКОВОДИТЕЛЬ ОТДЕЛА ПРОДАЖ</option>
+              <option>ЭКСПЕРТ ОТДЕЛА ПРОДАЖ</option>
+            </select>
+            <label class="hidden" for="#vacphone">Телефон</label>
+            <input class="form__input" type="text" placeholder="+38 ___ __ ___ __ *" required id="vacphone">
+          </div>
+          <div class="form__fh">
+            <label class="hidden" for="#vac-name">Имя</label>
+            <input class="form__input" type="text" placeholder="ФИО*" required id="vac-name">
+            <label class="hidden" for="#vac-email">E-mail</label>
             <input class="form__input" type="text" placeholder="E-mail*" required id="email">
-            <label class="hidden" for="#text">ваше сообщение</label>
-            <textarea rows="10" placeholder="Введите ваше сообщение..." autocapitalize="none" required id="text"></textarea>
-            <input class="form__radio" type="radio" id="sell" name="owner" checked>
-            <label for="#sell">Продажа</label>
-            <input class="form__radio" type="radio" id="rent" name="owner">
-            <label for="#rent">Аренда</label>
-            <label class="button button--form form__file-label" for="file">ПРИКРЕПИТЬ ФАЙЛ</label>
-            <input class="file" id="file" type="file" name="file" placeholder="ПРИКРЕПИТЬ ФАЙЛ" multiple required>
-            <p class="lze-capcha"><img src="img/capcha.png" alt="Временная замена"></p>
-            <input class="button button--owner-form" type="submit" placeholder="ПОДАТЬ ЗАЯВКУ">
-          </form>
+          </div>
+          <label class="hidden" for="#vac-text">ваше сообщение</label>
+          <textarea rows="10" placeholder="Введите ваше сообщение..." autocapitalize="none" required id="text"></textarea>
+          <div class="form__fh">
+            <label class="button button--form form__file-label" for="vac-file">ПРИКРЕПИТЬ ФАЙЛ</label>
+            <input class="file" id="vac-file" type="file" name="file" placeholder="ПРИКРЕПИТЬ ФАЙЛ" multiple required>
+            <input class="button button--owner-form" type="submit" placeholder="ОТПРАВИТЬ">
+          </div>
+          <p class="lze-capcha"><img src="img/capcha.png" alt="Временная замена"></p>
         </div>
       </div>
     </section>
