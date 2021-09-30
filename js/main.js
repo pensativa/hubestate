@@ -35,31 +35,6 @@
     $('.popap').slideUp(200);
   });
 
-  // FAQ Accordion
-  $(".faq__link").on("click", function() {
-    if ($(this).hasClass('open')) {
-      $(this).removeClass('open')
-    } else {
-      $(this).addClass('open')
-    }
-    $(".faq__detail:visible").slideUp();
-    if (!$(this).next().is(":visible")) {
-      $(this).next().slideDown(200);
-    }
-  });
-
-  $(".faq__link--next").on("click", function() {
-    if ($(this).hasClass('open')) {
-      $(this).removeClass('open')
-    } else {
-      $(this).addClass('open')
-    }
-    $(".faq__detail--next:visible").slideUp();
-    if (!$(this).next().is(":visible")) {
-      $(this).next().slideDown(200);
-    }
-  });
-
   //To top
 
   $(function() {
@@ -121,44 +96,63 @@
     else $(this).prev().text('ПРИКРЕПИТЬ ФАЙЛ');
   });
 
+  // FAQ Accordion
+  $(".faq__link").on("click", function() {
+    if ($(this).hasClass('open')) {
+      $(this).removeClass('open');
+    } else {
+      $(".faq__link").removeClass('open');
+      $(this).addClass('open');
+    }
+    $(".faq__detail:visible").slideUp();
+    if (!$(this).next().is(":visible")) {
+      $(this).next().slideDown(200);
+    }
+  });
+
 
     // Phone Mask
     $('#phone').mask('+38 (000) 000 0000', {
-        'translation': {
-            0: {
-                pattern: /[0-9+]/
-            }
+      'translation': {
+        0: {
+          pattern: /[0-9+]/
         }
+      }
     });
     $('#userphone').mask('+38 (000) 000 0000', {
-        'translation': {
-            0: {
-                pattern: /[0-9+]/
-            }
+      'translation': {
+        0: {
+          pattern: /[0-9+]/
         }
+      }
     });
     $('#phone-ser').mask('+38 (000) 000 0000', {
-        'translation': {
-            0: {
-                pattern: /[0-9+]/
-            }
+      'translation': {
+        0: {
+          pattern: /[0-9+]/
         }
+      }
     });
     $('#ownerphone').mask('+38 (000) 000 0000', {
-        'translation': {
-            0: {
-                pattern: /[0-9+]/
-            }
+      'translation': {
+        0: {
+          pattern: /[0-9+]/
         }
+      }
     });
     $('#vacphone').mask('+38 (000) 000 0000', {
-        'translation': {
-            0: {
-                pattern: /[0-9+]/
-            }
+      'translation': {
+        0: {
+          pattern: /[0-9+]/
         }
+      }
     });
-
-
+    $('#contacts-phone').mask('+38 (000) 000 0000', {
+      'translation': {
+        0: {
+          pattern: /[0-9+]/
+        }
+      }
+    });
 
 }(jQuery));
