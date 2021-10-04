@@ -2881,7 +2881,31 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
   background: #F3F3F3;
   width: 782px;
   max-width: 100%;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  position: relative; }
+
+.card__top {
+  position: absolute;
+  top: 45px;
+  right: -10px;
+  background: #212121;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 5px 10px;
+  z-index: 3; }
+  .card__top p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-family: "DINCondensed", sans-serif;
+    color: #C77B2B;
+    text-transform: uppercase; }
+    .card__top p span {
+      padding: 15px 13px 10px;
+      color: #fff;
+      background: url(../img/star.png) no-repeat center/contain;
+      display: inline-block;
+      font-size: 16px;
+      vertical-align: baseline; }
 
 .card__text {
   padding: 0;
@@ -2899,6 +2923,9 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
   width: 55%; }
   .card__text .full {
     width: 100%; }
+  .card__text .full.adres {
+    padding-right: 40px;
+    background: url("../img/location-black.png") no-repeat center right 20px; }
 
 .card__item {
   padding: 13px 18px; }
@@ -3001,6 +3028,8 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
   color: #fff; }
   .grid .card__text .card__item:first-child {
     margin-top: 50px; }
+  .grid .card__text .full.adres {
+    background-image: url("../img/location.png"); }
 
 .grid .card__img {
   width: 100%; }
@@ -3080,7 +3109,15 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
     width: auto;
     padding: 5px; }
   .card__tag img {
-    max-width: 90%; } }
+    max-width: 90%; }
+  .card__top {
+    top: 40px;
+    padding: 5px;
+    z-index: 3; }
+    .card__top p {
+      font-size: 15px; }
+      .card__top p span {
+        font-size: 12px; } }
 
 .sort {
   width: 780px;
@@ -3820,7 +3857,8 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
     font-size: 23px; } }
 
 .sitemap {
-  background: #C77B2B; }
+  background: #C77B2B;
+  min-height: calc(100vh - 38px); }
   .sitemap .wrapper {
     padding-bottom: 96px;
     background: url("../img/mapsite.png") no-repeat top left/100% auto, url("../img/sm.png") no-repeat bottom right; }
