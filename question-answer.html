@@ -189,15 +189,15 @@
       <nav class="left-menu__nav">
         <div id="left-menu__toggle">КАТАЛОГ</div>
         <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="rent.html">
+          <li class="menu__item menu__item--filter"><a class="menu__link" href="rent.html">
               <svg class="menu__icon">
                 <use xlink:href="#icon-rent"></use>
               </svg>АРЕНДА</a></li>
-          <li class="menu__item"><a class="menu__link" href="sell.html">
+          <li class="menu__item menu__item--filter"><a class="menu__link" href="sell.html">
               <svg class="menu__icon">
                 <use xlink:href="#icon-sell"></use>
               </svg>ПРОДАЖА</a></li>
-          <li class="menu__item"><a class="menu__link" href="newbuild.html">
+          <li class="menu__item menu__item--filter"><a class="menu__link" href="newbuild-grid.html">
               <svg class="menu__icon">
                 <use xlink:href="#icon-newbuild"></use>
               </svg>НОВОСТРОИ</a></li>
@@ -207,6 +207,125 @@
               </svg>УСЛУГИ</a></li>
         </ul>
       </nav>
+      <section class="filter">
+        <form class="filter__form">
+          <div class="filter__item mob-newbuild">
+            <button class="filter__button active" id="filter-block">ФИЛЬТРЫ</button>
+            <button class="filter__button" id="jk-block">ПЛИТКА ЖК</button>
+          </div>
+          <div class="filter__item search">
+            <label class="hidden" for="#search"></label>
+            <input class="filter__input filter__input--search" type="text" name="search" placeholder="Поиск по ID" id="search">
+          </div>
+          <fieldset class="filter__fieldset type">
+            <input class="filter__radio type__radio" type="radio" id="commers" name="type">
+            <label class="filter__button-label" for="#commers">КОММЕРЦИЯ
+              <svg class="social__icon">
+                <use xlink:href="#icon-commers"></use>
+              </svg>
+            </label>
+            <input class="filter__radio type__radio" type="radio" id="flat" name="type" checked>
+            <label class="filter__button-label" for="#flat">КВАРТИРЫ
+              <svg class="social__icon">
+                <use xlink:href="#icon-flat"></use>
+              </svg>
+            </label>
+            <input class="filter__radio type__radio" type="radio" id="house" name="type">
+            <label class="filter__button-label" for="#house">ДОМА
+              <svg class="social__icon">
+                <use xlink:href="#icon-hous"></use>
+              </svg>
+            </label>
+          </fieldset>
+          <div class="filter__item location">
+            <label class="filter__title" for="#loc">Локация:</label>
+            <select class="filter__input filter__select" id="loc">
+              <option>Киевская область</option>
+              <option>Харьковская область</option>
+              <option>Днепропетровская область</option>
+            </select>
+          </div>
+          <div class="filter__item rayon">
+            <label class="filter__title" for="#loc">Район:</label>
+            <select class="filter__input filter__select">
+              <option>Броварской район</option>
+              <option>Новопечерский район</option>
+              <option>Днепровский район</option>
+            </select>
+          </div>
+          <div class="filter__item jk">
+            <label class="filter__title" for="#loc">ЖК:</label>
+            <select class="filter__input filter__select">
+              <option>TETRIS HALL</option>
+              <option>The Garden</option>
+              <option>BUSOV HILL</option>
+            </select>
+          </div>
+          <fieldset class="filter__fieldset price">
+            <p class="filter__title">Цена:</p>
+            <input class="filter__radio" type="radio" id="usd" name="currency">
+            <label class="filter__button-cur" for="#usd">USD</label>
+            <input class="filter__radio" type="radio" id="grn" name="currency" checked>
+            <label class="filter__button-cur" for="#grn">Грн</label>
+            <div class="filter__half">
+              <input class="filter__input filter__input--half" type="text" value="40.000$" id="price-min">
+              <input class="filter__input filter__input--half" type="text" value="113.000$" id="price-max">
+            </div>
+            <p>
+              <label class="hidden" for="amount">Цена:</label>
+              <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+            <div id="slider-range"></div>
+          </fieldset>
+          <fieldset class="filter__fieldset squere">
+            <p class="filter__title">Площадь:</p>
+            <div class="squere-radio">
+              <input class="filter__radio" type="radio" id="m2" name="squere">
+              <label class="filter__button-cur" for="#m2">м2</label>
+              <input class="filter__radio" type="radio" id="sotka" name="squere" checked>
+              <label class="filter__button-cur" for="#sotka">сотки</label>
+            </div>
+            <div class="filter__half">
+              <input class="filter__input filter__input--half" type="text" value="125 м2" id="squere-min">
+              <input class="filter__input filter__input--half" type="text" value="500 м2" id="squere-max">
+            </div>
+            <p>
+              <label class="hidden" for="squere">Площадь:</label>
+              <input type="text" id="squere" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+            <div id="slider-range2"></div>
+          </fieldset>
+          <div class="catalog-radio">
+            <p class="filter__title">Ремонт:</p>
+            <div class="filter__radio">
+              <input type="radio" id="with" name="repair" checked>
+              <label for="#with">С ремонтом</label>
+              <input type="radio" id="without" name="repair">
+              <label for="#without">Без ремонта</label>
+            </div>
+          </div>
+          <div class="newbuild-radio">
+            <p class="filter__title">Статус строительства:</p>
+            <div class="filter__radio">
+              <input type="radio" id="done" name="rady" checked>
+              <label for="#done">Сдан</label>
+              <input type="radio" id="notdone" name="rady">
+              <label for="#notdone">Не сдан</label>
+            </div>
+          </div>
+          <div class="filter__item">
+            <label class="filter__title" for="#rooms">Кол-во комнат:</label>
+            <select class="filter__input filter__select" id="rooms">
+              <option>5+</option>
+              <option>4</option>
+              <option>3</option>
+              <option>2</option>
+              <option>1</option>
+            </select>
+          </div>
+          <div class="filter__submit"><a class="button button--owner-form button--filter" href="">ИСКАТЬ</a></div>
+        </form>
+      </section>
     </section>
     <section class="header__right">
       <div id="menu__toggle">
@@ -248,115 +367,6 @@
               <use xlink:href="#icon-telegram"></use>
             </svg></a></div>
       </div>
-    </section>
-    <section class="filter">
-      <form class="filter__form">
-        <div class="filter__item">
-          <label class="hidden" for="#search"></label>
-          <input class="filter__input filter__input--search" type="text" name="search" placeholder="Поиск по ID" id="search">
-        </div>
-        <fieldset class="filter__fieldset type">
-          <input class="filter__radio" type="radio" id="commers" name="type" checked>
-          <label class="filter__button-label" for="#commers">КОММЕРЦИЯ
-            <svg class="social__icon">
-              <use xlink:href="#icon-commers"></use>
-            </svg>
-          </label>
-          <input class="filter__radio" type="radio" id="flat" name="type">
-          <label class="filter__button-label" for="#flat">КВАРТИРЫ
-            <svg class="social__icon">
-              <use xlink:href="#icon-flat"></use>
-            </svg>
-          </label>
-          <input class="filter__radio" type="radio" id="house" name="type">
-          <label class="filter__button-label" for="#house">ДОМА
-            <svg class="social__icon">
-              <use xlink:href="#icon-hous"></use>
-            </svg>
-          </label>
-        </fieldset>
-        <div class="filter__item">
-          <label class="filter__title" for="#loc">Локация:</label>
-          <select class="filter__input filter__select" id="loc">
-            <option>Киевская область</option>
-            <option>Харьковская область</option>
-            <option>Днепропетровская область</option>
-          </select>
-        </div>
-        <div class="filter__item">
-          <label class="filter__title" for="#loc">Район:</label>
-          <select class="filter__input filter__select">
-            <option>Броварской район</option>
-            <option>Новопечерский район</option>
-            <option>Днепровский район</option>
-          </select>
-        </div>
-        <div class="filter__item">
-          <label class="filter__title" for="#loc">ЖК:</label>
-          <select class="filter__input filter__select">
-            <option>TETRIS HALL</option>
-            <option>The Garden</option>
-            <option>BUSOV HILL</option>
-          </select>
-        </div>
-        <fieldset class="filter__fieldset price">
-          <p class="filter__title">Цена:</p>
-          <input class="filter__radio" type="radio" id="usd" name="currency">
-          <label class="filter__button-cur" for="#usd">USD</label>
-          <input class="filter__radio" type="radio" id="grn" name="currency" checked>
-          <label class="filter__button-cur" for="#grn">Грн</label>
-          <div class="filter__half">
-            <input class="filter__input filter__input--half" type="text" value="40.000$" id="price-min">
-            <input class="filter__input filter__input--half" type="text" value="113.000$" id="price-max">
-          </div>
-          <p>
-            <label class="hidden" for="amount">Цена:</label>
-            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-          </p>
-          <div id="slider-range"></div>
-        </fieldset>
-        <fieldset class="filter__fieldset">
-          <p class="filter__title">Площадь:</p>
-          <div class="filter__half">
-            <input class="filter__input filter__input--half" type="text" value="125 м2" id="squere-min">
-            <input class="filter__input filter__input--half" type="text" value="500 м2" id="squere-max">
-          </div>
-          <p>
-            <label class="hidden" for="squere">Площадь:</label>
-            <input type="text" id="squere" readonly style="border:0; color:#f6931f; font-weight:bold;">
-          </p>
-          <div id="slider-range2"></div>
-        </fieldset>
-        <div class="catalog-radio">
-          <p class="filter__title">Ремонт:</p>
-          <div class="filter__radio">
-            <input type="radio" id="with" name="repair" checked>
-            <label for="#with">С ремонтом</label>
-            <input type="radio" id="without" name="repair">
-            <label for="#without">Без ремонта</label>
-          </div>
-        </div>
-        <div class="newbuild-radio">
-          <p class="filter__title">Статус строительства:</p>
-          <div class="filter__radio">
-            <input type="radio" id="done" name="rady" checked>
-            <label for="#done">Сдан</label>
-            <input type="radio" id="notdone" name="rady">
-            <label for="#notdone">Не сдан</label>
-          </div>
-        </div>
-        <div class="filter__item">
-          <label class="filter__title" for="#rooms">Кол-во комнат:</label>
-          <select class="filter__input filter__select" id="rooms">
-            <option>5+</option>
-            <option>4</option>
-            <option>3</option>
-            <option>2</option>
-            <option>1</option>
-          </select>
-        </div>
-        <input class="button button--owner-form button--filter" type="submit" placeholder="ИСКАТЬ">
-      </form>
     </section>
   </header>
   <main>
@@ -503,7 +513,7 @@
               <li class="menu-footer__item"><a class="menu-footer__link" href="sell.html">Покупка</a></li>
               <li class="menu-footer__item"><a class="menu-footer__link" href="owner.html">Владельцам</a></li>
               <li class="menu-footer__item"><a class="menu-footer__link" href="contacts.html">Контакты</a></li>
-              <li class="menu-footer__item"><a class="menu-footer__link" href="newbuild.html">Новострои</a></li>
+              <li class="menu-footer__item"><a class="menu-footer__link" href="newbuild-grid.html">Новострои</a></li>
               <li class="menu-footer__item"><a class="menu-footer__link" href="news.html">Новости</a></li>
               <li class="menu-footer__item"><a class="menu-footer__link" href="sitemap.html">Карта сайта</a></li>
               <li class="menu-footer__item"><a class="menu-footer__link" href="services.html">Доп услуги</a></li>
@@ -539,6 +549,23 @@
     </div><span class="popap__close">Назад</span>
     <p class="popap__cr">© 2020 HUB ESTATE - все права защищены</p>
   </section>
+  <div class="newbuild__list wrapper">
+    <div class="newbuild__item"><img class="newbuild__img" src="img/garden.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/tetris.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/busov.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/bulvar.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/alterego.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/chicago.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/pocrovskiy.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/park.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/skyline.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/garden.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/tetris.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/busov.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/bulvar.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/alterego.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+    <div class="newbuild__item"><img class="newbuild__img" src="img/chicago.jpg" alt="Строительная компания"><a class="button newbuild__button" href="card-new.html">ПОДРОБНЕЕ</a></div>
+  </div>
   <script src="js/jquery-min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.ui.touch-punch.min.js"></script>

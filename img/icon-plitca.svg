@@ -1,1 +1,6 @@
-<svg width="27" height="27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#D37700" d="M27 27H14.774V14.774H27zm0-14.773H14.774V0H27zM12.226 27H0V14.774h12.226zm0-14.773H0V0h12.226z"/></svg>
+<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="27" y="27" width="12.2264" height="12.2264" transform="rotate(180 27 27)" fill="#D37700"/>
+<rect x="27" y="12.2264" width="12.2264" height="12.2264" transform="rotate(180 27 12.2264)" fill="#D37700"/>
+<rect x="12.2266" y="27" width="12.2264" height="12.2264" transform="rotate(180 12.2266 27)" fill="#D37700"/>
+<rect x="12.2266" y="12.2264" width="12.2264" height="12.2264" transform="rotate(180 12.2266 12.2264)" fill="#D37700"/>
+</svg>
