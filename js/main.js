@@ -47,6 +47,12 @@
     }
   });
 
+  $('main').on('click', function() {
+    $('footer ~ .newbuild__list').removeClass('open');
+    $('.filter').removeClass('open');
+    $('.menu__item--filter').removeClass('active');
+  });
+
   $('.type__radio').on('click', function() {
     if($(this).is('#commers')) {
       $('.squere-radio').fadeOut();
