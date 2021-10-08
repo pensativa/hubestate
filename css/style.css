@@ -2966,8 +2966,7 @@ footer ~ .newbuild__list {
   background: #000 url("../img/nb-bg.jpg") no-repeat center/cover; }
   footer ~ .newbuild__list::-webkit-scrollbar {
     width: 0; }
-  3
-footer ~ .newbuild__list.open {
+  footer ~ .newbuild__list.open {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
 
