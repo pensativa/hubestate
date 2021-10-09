@@ -2955,7 +2955,7 @@ footer ~ .newbuild__list {
   top: 0;
   right: 97px;
   width: calc(100% - 142px - 286px - 97px);
-  z-index: 20;
+  z-index: 200;
   max-height: 843px;
   overflow-y: scroll;
   -webkit-transform: translateY(-100%);
