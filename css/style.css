@@ -3035,7 +3035,7 @@ footer ~ .newbuild__list {
     width: 100%;
     right: 0;
     top: 304px;
-    z-index: 13; } }
+    z-index: 200; } }
 
 .catalog__item {
   display: -webkit-box;
