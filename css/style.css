@@ -30,7 +30,7 @@
 
 /*Переменные*/
 .wrapper {
-  max-width: 1330px;
+  max-width: 1350px;
   width: 100%;
   padding: 0 145px;
   margin: 0 auto; }
@@ -69,6 +69,7 @@ body {
   font-family: "Montserrat", "PT Sans", sans-serif;
   font-weight: 500;
   color: #000000;
+  background-color: #fff;
   margin: 0;
   padding: 0;
   min-width: 320px;
@@ -419,11 +420,11 @@ template {
           align-items: center; }
   .page__catalog .wrapper {
     padding-left: calc(145px + 286px);
-    width: 1330px; }
+    width: 1350px; }
 
 .page__footer {
   padding-left: calc(145px + 286px);
-  width: 1330px; }
+  width: 1350px; }
 
 @media (max-width: 1180px) {
   .page__catalog .wrapper,
@@ -517,31 +518,12 @@ template {
 .button--load {
   background: #F2F2F2;
   color: #A7A7A7;
-  position: relative;
-  margin-top: 30px; }
+  margin: 0 10px; }
   .button--load:hover, .button--load:focus, .button--load:active {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     -webkit-box-shadow: none;
             box-shadow: none; }
-  .button--load::before, .button--load::after {
-    width: 100px;
-    -webkit-transform: scaleY(1.45);
-            transform: scaleY(1.45);
-    text-align: center;
-    background: inherit;
-    color: inherit;
-    display: inline-block;
-    position: absolute;
-    top: 15px; }
-  .button--load::before {
-    content: "<";
-    left: 0;
-    border-right: 12px solid #fff; }
-  .button--load::after {
-    content: ">";
-    right: 0;
-    border-left: 12px solid #fff; }
 
 .button--more {
   background: #F2F2F2;
@@ -558,8 +540,8 @@ template {
   .button {
     padding: 8px 25px 7px;
     font-size: 28px; }
-  .button--load::before, .button--load::after {
-    display: none; } }
+  .button--load {
+    margin: 0; } }
 
 .header__left {
   position: fixed;
@@ -712,7 +694,8 @@ template {
   font-family: "DINCondensed", sans-serif;
   color: #fff;
   text-transform: uppercase;
-  font-size: 24px; }
+  font-size: 24px;
+  display: inline-block; }
 
 .menu__icon {
   max-width: 64px;
@@ -955,7 +938,7 @@ template {
 
 @media (max-height: 842px) and (min-width: 850px) {
   .menu__icon {
-    max-height: 55px;
+    max-height: 75px;
     height: auto;
     width: auto; } }
 
@@ -1075,19 +1058,19 @@ template {
     background: url("../img/rent.png") no-repeat center/cover; }
     .about__item:nth-of-type(1) .title {
       font-size: 168px;
-      bottom: 114px;
+      bottom: 110px;
       right: 30px; }
   .about__item:nth-of-type(2) {
     background: url("../img/sell.png") no-repeat center/cover; }
     .about__item:nth-of-type(2) .title {
       font-size: 142px;
-      bottom: 126px;
+      bottom: 122px;
       right: 30px; }
   .about__item:nth-of-type(3) {
     background: url("../img/newbuild.png") no-repeat center/cover; }
     .about__item:nth-of-type(3) .title {
       font-size: 111px;
-      bottom: 148px;
+      bottom: 144px;
       right: 39px; }
   .about__item .about__item-wrapper {
     position: absolute;
@@ -1477,7 +1460,7 @@ template {
 
 .news-page .wrapper {
   padding-top: 100px;
-  background: url("../img/news-name.svg") no-repeat top center/100% auto; }
+  background: url("../img/news-name.svg") no-repeat top center/78% auto; }
 
 @media (max-width: 850px) {
   .news {
@@ -1716,6 +1699,19 @@ template {
     font-weight: 700;
     font-size: 15px; }
 
+.footer__map-img-t {
+  display: none; }
+
+.page__footer .footer__map {
+  width: 100%;
+  max-width: 100%; }
+  .page__footer .footer__map img {
+    width: 100%; }
+  .page__footer .footer__map .footer__map-img {
+    display: none; }
+  .page__footer .footer__map .footer__map-img-t {
+    display: block; }
+
 .footer__cr {
   background: #C77B2B;
   clear: both; }
@@ -1738,6 +1734,17 @@ template {
     .footer__cr a:hover, .footer__cr a:focus, .footer__cr a:active {
       opacity: 1; }
 
+@media (max-width: 1190px) {
+  .footer__map {
+    width: 100%;
+    max-width: 100%; }
+    .footer__map img {
+      width: 100%; }
+  .footer__map-img {
+    display: none; }
+  .footer__map-img-t {
+    display: block; } }
+
 @media (max-width: 850px) {
   .tf ~ .footer,
   .footer {
@@ -1756,6 +1763,10 @@ template {
   .footer__map {
     margin: 30px 0;
     max-width: 100%; }
+  .footer__map-img {
+    display: block; }
+  .footer__map-img-t {
+    display: none; }
   .menu-footer {
     text-align: left; }
   .menu-footer__link {
@@ -1764,9 +1775,8 @@ template {
 .popap {
   position: fixed;
   background-color: #fff;
-  max-height: 100%;
-  max-width: 100%;
-  width: 1190px;
+  height: 100%;
+  width: 100%;
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -1781,8 +1791,15 @@ template {
   .popap.popap__see {
     background-color: #212121;
     color: #fff; }
+    .popap.popap__see .popap__cr {
+      color: #fff; }
   .popap.popap--download {
     background: #D6D6D6 url("../img/cb-bg.svg") no-repeat top center/100% auto; }
+
+.popap__wrap {
+  width: 1160px;
+  max-width: 100%;
+  margin: 0 auto; }
 
 .popap__close {
   position: absolute;
@@ -1860,7 +1877,7 @@ template {
 .team .wrapper {
   padding-top: 130px;
   margin-bottom: 145px;
-  background: #fff url("../img/about-top.svg") no-repeat top center/100% auto; }
+  background: #fff url("../img/about-top.svg") no-repeat top center/78% auto; }
 
 .team__text {
   margin-bottom: 100px;
@@ -1872,7 +1889,7 @@ template {
 
 .team__work .wrapper {
   margin-bottom: 155px;
-  background: url("../img/hands.svg") no-repeat right 15% top 50px, url("../img/wark.svg") no-repeat top center/100% auto; }
+  background: url("../img/hands.svg") no-repeat right 15% top 50px, url("../img/wark.svg") no-repeat top center/78% auto; }
 
 .team__list {
   padding-left: 0;
@@ -1885,7 +1902,7 @@ template {
 
 .team__people .wrapper {
   padding-bottom: 470px;
-  background: url("../img/team-bg.svg") no-repeat bottom center/100% auto, url("../img/team-icon.svg") no-repeat top center/100% auto; }
+  background: url("../img/team-bg.svg") no-repeat bottom center/78% auto, url("../img/team-icon.svg") no-repeat top center/78% auto; }
 
 .team__people .page__subtitle {
   margin-bottom: 50px; }
@@ -2317,7 +2334,7 @@ template {
 .new__img {
   float: right;
   margin-left: 30px;
-  max-width: 70%;
+  max-width: 65%;
   width: 775px; }
 
 .new__title {
@@ -2343,6 +2360,44 @@ template {
   font-size: 22px;
   text-transform: inherit;
   margin-bottom: 30px; }
+
+.new__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  position: relative; }
+
+.btn {
+  width: 100px;
+  text-align: center;
+  background: inherit;
+  color: inherit;
+  display: inline-block;
+  font-size: 0;
+  background: #F2F2F2;
+  color: #A7A7A7;
+  padding: 15px 25px 14px; }
+  .btn:hover, .btn:focus, .btn:active {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .btn::after {
+    font-size: 54px;
+    -webkit-transform: scaleY(1.45);
+            transform: scaleY(1.45); }
+
+.btn-prev::after {
+  content: "<";
+  display: inline-block; }
+
+.btn-next::after {
+  content: ">";
+  display: inline-block; }
 
 @media (max-width: 850px) {
   .new .wrapper {
@@ -2372,11 +2427,24 @@ template {
     top: 30px;
     right: 20px; }
   .new__data {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .new__buttons {
+    padding-bottom: 60px; }
+  .btn {
+    position: absolute;
+    bottom: 0;
+    padding: 8px 18px 7px;
+    width: auto; }
+    .btn::after {
+      font-size: 28px; }
+  .btn-prev {
+    left: 0; }
+  .btn-next {
+    right: 0; } }
 
 .vacancies .wrapper {
   padding-top: 215px;
-  background: url("../img/vacancies.png") no-repeat top 50px center/100% auto; }
+  background: url("../img/vacancies.png") no-repeat top 50px center/78% auto; }
 
 .vacancies__item {
   width: 490px;
@@ -3023,7 +3091,9 @@ footer ~ .newbuild__list {
     font-size: 15px; }
   .type .social__icon {
     width: 36px;
-    height: 23px; } }
+    height: 23px; }
+  .filter__input {
+    height: 43px; } }
 
 @media (max-width: 1180px) {
   .filter {
@@ -3237,7 +3307,6 @@ footer ~ .newbuild__list {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 100%;
   margin: 0 auto 50px; }
 
 .grid .catalog__item {
@@ -3461,7 +3530,7 @@ footer ~ .newbuild__list {
 .newbuild__grid {
   background: #000 url("../img/nb-bg.jpg") no-repeat center/cover; }
 
-.newbuild__list {
+.newbuild .newbuild__list.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3469,7 +3538,10 @@ footer ~ .newbuild__list {
       flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 120px 0 420px; }
 
 .newbuild__item {
   width: 33%;
