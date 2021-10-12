@@ -3311,7 +3311,8 @@ footer ~ .newbuild__list {
   background: #212121;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  align-items: center;}
 
 .card__tag {
   display: block;
