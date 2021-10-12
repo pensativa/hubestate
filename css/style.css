@@ -420,11 +420,13 @@ template {
           align-items: center; }
   .page__catalog .wrapper {
     padding-left: calc(145px + 286px);
-    width: 1350px; }
+    width: 1350px;
+    max-width: 100%; }
 
 .page__footer {
   padding-left: calc(145px + 286px);
-  width: 1350px; }
+  width: 1350px;
+  max-width: 100%; }
 
 @media (max-width: 1180px) {
   .page__catalog .wrapper,
@@ -2792,7 +2794,7 @@ template {
           transform: translateY(-300%);
   -webkit-transition: 0.5s;
   transition: 0.5s; }
-  .filter.open, .filter.show {
+  .filter.open, .filter.show, .filter.open.show {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
 
@@ -3157,7 +3159,12 @@ footer ~ .newbuild__list {
     width: 100%;
     right: 0;
     top: 304px;
-    z-index: 25; } }
+    z-index: 25;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 
 .catalog__item {
   display: -webkit-box;
@@ -3331,6 +3338,7 @@ footer ~ .newbuild__list {
 .grid .card__text {
   position: absolute;
   width: 100%;
+  height: 100%;
   z-index: 2;
   color: #fff; }
   .grid .card__text .card__item:first-child {
@@ -3578,6 +3586,8 @@ footer ~ .newbuild__list {
   opacity: 1; }
 
 @media (max-width: 850px) {
+  .newbuild .newbuild__list.wrapper {
+    padding: 0 20px; }
   .newbuild__item {
     width: 50%; }
   .newbuild__button {
