@@ -2194,7 +2194,7 @@ template {
     border: none;
     padding: 14px 50px 14px 10px;
     margin-bottom: 30px;
-    background: rgba(0, 0, 0, 0.13) url("../img/write.png") no-repeat top 15px right 15px; }
+    background: rgba(0, 0, 0, 0.13) url("../img/write-gray.svg") no-repeat top 15px right 15px; }
   .owner-form__callback .form__input::-webkit-input-placeholder,
   .owner-form__callback textarea::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.36); }
@@ -2211,7 +2211,7 @@ template {
   .owner-form__callback textarea::placeholder {
     color: rgba(0, 0, 0, 0.36); }
   .owner-form__callback .form__file-label {
-    background-image: url("../img/file-icon.png");
+    background-image: url("../img/file-icon.svg");
     background-repeat: no-repeat;
     background-position: center left 13px;
     margin-bottom: 35px;
@@ -2612,10 +2612,10 @@ template {
   padding: 15px 200px 15px 25px;
   cursor: pointer;
   opacity: 0.7;
-  background: #F2F2F2 url("../img/lupa.png") no-repeat center right 25px; }
+  background: #F2F2F2 url("../img/lupa.svg") no-repeat center right 25px; }
   .faq__link.open {
     opacity: 1;
-    background-image: url("../img/close.png"); }
+    background-image: url("../img/close.svg"); }
 
 .faq__item {
   margin-bottom: 28px; }
@@ -2850,7 +2850,7 @@ template {
   .filter__input::placeholder {
     color: rgba(255, 255, 255, 0.36); }
   .filter__input#search {
-    background-image: url("../img/lupa-w.png");
+    background-image: url("../img/lupa-w.svg");
     background-repeat: no-repeat;
     background-position: center right 10px;
     padding-right: 35px; }
@@ -3675,6 +3675,18 @@ footer ~ .newbuild__list {
 
 .card-item__img {
   width: 45%; }
+
+.card-item__video {
+  position: relative;
+  display: inline-block; }
+  .card-item__video::after {
+    content: "";
+    width: 103%;
+    height: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: -5px;
+    background: url("../img/video.svg") no-repeat center/cover; }
 
 .card-item__title {
   font-size: 30px;
