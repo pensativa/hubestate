@@ -60,7 +60,7 @@ select {
   border: none;
   border-radius: 0; }
 
-@media (max-width: 850px) {
+@media (max-width: 850px), (max-height: 600px) {
   .wrapper {
     padding: 0 20px; } }
 
@@ -602,7 +602,7 @@ template {
     background: rgba(0, 0, 0, 0.5) url("../img/bg-menu.svg") no-repeat center/cover;
     z-index: 99; }
 
-@media (max-height: 842px) and (min-width: 850px) {
+@media (max-height: 900px) and (min-width: 850px) {
   .header__right,
   .header__left {
     max-height: 100%;
@@ -618,7 +618,7 @@ template {
         -ms-flex-align: center;
             align-items: center; } }
 
-@media (max-width: 850px) {
+@media (max-width: 850px), (max-height: 600px) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -944,7 +944,20 @@ template {
     height: auto;
     width: auto; } }
 
-@media (max-width: 850px) {
+@media (min-height: 601px) and (max-height: 768px) and (min-width: 850px) {
+  .menu__icon {
+    max-height: 49px;
+    height: auto;
+    width: auto; }
+  .header__right {
+    padding-bottom: 20px; }
+  .menu__lang-item.active {
+    margin-left: 35px; }
+  .menu__lang-item.active::after {
+    left: -42px;
+    width: 32px; } }
+
+@media (max-width: 850px), (max-height: 600px) {
   .menu,
   .menu__lang,
   .menu__social {
@@ -1772,7 +1785,10 @@ template {
   .menu-footer {
     text-align: left; }
   .menu-footer__link {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .footer__map {
+    width: 346px;
+    margin: 0 10px 20px; } }
 
 .popap {
   position: fixed;
@@ -2809,8 +2825,9 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 818px;
-  text-align: left; }
+  height: 818px;
+  text-align: left;
+  max-height: 98vh; }
 
 .filter__input {
   width: 256px;
@@ -3086,13 +3103,33 @@ footer ~ .newbuild__list {
 .mob-newbuild {
   display: none; }
 
-@media (max-height: 842px) and (min-width: 850px) {
+@media (max-height: 900px) and (min-width: 850px) {
   .filter, .filter__form {
-    max-height: 100%;
     min-height: 100%; }
   .type input[type="radio"]:checked,
   .type input[type="radio"]:not(:checked) {
-    height: 50px; }
+    height: 55px; }
+  .type input[type="radio"]:checked + label,
+  .type input[type="radio"]:not(:checked) + label {
+    padding: 5px 0;
+    font-size: 15px; }
+  .type input[type="radio"]:checked + label svg,
+  .type input[type="radio"]:not(:checked) + label svg {
+    margin-bottom: 5px; }
+  .type .social__icon {
+    width: 36px;
+    height: 23px; }
+  .filter__input {
+    height: 43px; } }
+
+@media (max-height: 768px) and (min-width: 850px) {
+  .filter, .filter__form {
+    min-height: 100%; }
+  .filter__fieldset.type {
+    margin-bottom: 5px; }
+  .type input[type="radio"]:checked,
+  .type input[type="radio"]:not(:checked) {
+    height: 60px; }
   .type input[type="radio"]:checked + label,
   .type input[type="radio"]:not(:checked) + label {
     padding: 5px 0;
@@ -3101,7 +3138,32 @@ footer ~ .newbuild__list {
     width: 36px;
     height: 23px; }
   .filter__input {
-    height: 43px; } }
+    height: 30px;
+    font-size: 11px;
+    padding: 5px; }
+  .filter__title {
+    font-size: 11px;
+    margin-bottom: 5px; }
+  .filter__radio input[type="radio"]:checked + label,
+  .filter__radio input[type="radio"]:not(:checked) + label {
+    padding-left: 30px;
+    margin-bottom: 9px;
+    line-height: 20px; }
+  .filter__radio input[type="radio"]:checked + label:before,
+  .filter__radio input[type="radio"]:not(:checked) + label:before {
+    width: 20px;
+    height: 20px; }
+  .filter__radio input[type="radio"]:checked + label:after {
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 9px; }
+  .filter .button--owner-form {
+    font-size: 15px;
+    padding: 7px 13px 6px; }
+  .price input[type="radio"]:checked + label,
+  .price input[type="radio"]:not(:checked) + label, .squere input[type="radio"]:checked + label, .squere input[type="radio"]:not(:checked) + label {
+    margin: -21px 15px 7px 0; } }
 
 @media (max-width: 1180px) {
   .filter {
@@ -3150,7 +3212,7 @@ footer ~ .newbuild__list {
       background: #C77B2B;
       color: #000000; } }
 
-@media (max-width: 850px) {
+@media (max-width: 850px), (max-height: 600px) {
   .filter {
     position: absolute;
     top: 236px;
@@ -3159,7 +3221,8 @@ footer ~ .newbuild__list {
     margin: 0;
     min-height: auto; }
   .filter__form {
-    min-height: auto; }
+    min-height: auto;
+    text-align: center; }
   footer ~ .newbuild__list {
     position: absolute;
     width: 100%;
