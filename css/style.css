@@ -468,7 +468,7 @@ template {
   font-size: 54px;
   color: #000000;
   text-align: center;
-  -webkit-appearance: none;
+  -webkit-appearance: none !important;
   -moz-appearance: none;
   appearance: none; }
   .button:hover, .button:focus, .button:active {
@@ -3082,6 +3082,8 @@ footer ~ .newbuild__list {
   width: calc(100% - 255px - 286px);
   z-index: 20;
   max-height: 843px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   overflow-y: scroll;
   -webkit-transform: translateY(-300%);
           transform: translateY(-300%);
@@ -3095,10 +3097,15 @@ footer ~ .newbuild__list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   footer ~ .newbuild__list::-webkit-scrollbar {
-    width: 0; }
+    width: 0;
+    background: transparent; }
   footer ~ .newbuild__list.open {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
+
+@-moz-document url-prefix() {
+  footer ~ .newbuild__list {
+    scrollbar-width: none; } }
 
 .mob-newbuild {
   display: none; }
@@ -3485,6 +3492,7 @@ footer ~ .newbuild__list {
     min-height: 100%; }
   .grid .catalog__item {
     min-height: 300px;
+    min-width: 300px;
     margin-bottom: 20px; }
   .grid .card__text .card__item:first-child {
     margin-top: 25px; }
@@ -3550,7 +3558,7 @@ footer ~ .newbuild__list {
 
 .sort__title {
   font-weight: 500;
-  font-size: 12.1858px;
+  font-size: 12px;
   opacity: 0.5;
   margin-right: 5px; }
 
@@ -3587,7 +3595,11 @@ footer ~ .newbuild__list {
   .sort__item {
     margin-left: 10px; }
   .sort__item:last-child {
-    display: none; } }
+    display: none; }
+  .sort__title {
+    font-size: 9px; }
+  .sort__select {
+    min-width: 87px; } }
 
 .newbuild-radio {
   display: none; }
