@@ -469,8 +469,8 @@ template {
   color: #000000;
   text-align: center;
   -webkit-appearance: none !important;
-  -moz-appearance: none;
-  appearance: none; }
+  -moz-appearance: none !important;
+  appearance: none !important; }
   .button:hover, .button:focus, .button:active {
     -webkit-box-shadow: 8px 20px 40px rgba(138, 100, 11, 0.3);
             box-shadow: 8px 20px 40px rgba(138, 100, 11, 0.3); }
@@ -3484,7 +3484,7 @@ footer ~ .newbuild__list {
     min-width: 366px;
     margin-bottom: 20px; }
   .grid .card__item {
-    padding: 13px 10px 0; } }
+    padding: 13px 9px 0; } }
 
 @media (max-width: 850px) {
   .grid .catalog {
@@ -3492,7 +3492,10 @@ footer ~ .newbuild__list {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly; }
   .grid .card__text {
-    min-height: 100%; }
+    min-height: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   .grid .catalog__item {
     min-height: 300px;
     min-width: 300px;
@@ -3590,11 +3593,12 @@ footer ~ .newbuild__list {
     fill: #C77B2B; }
 
 @media (max-width: 850px) {
-  .sort {
+  .sort.wrapper {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    margin-top: 10px; }
+    margin: 10px auto 0;
+    width: 320px; }
   .sort__item {
     margin-left: 10px; }
   .sort__item:last-child {
@@ -4121,7 +4125,7 @@ footer ~ .newbuild__list {
     font-size: 22px;
     width: 49%; }
   .card-new__buttons .button--download {
-    background-image: url("../img/download.png");
+    background-image: url("../img/download.svg");
     background-repeat: no-repeat;
     background-position: center left 10px; }
   .card-new__buttons .button--black {
