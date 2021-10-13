@@ -3320,18 +3320,20 @@ footer ~ .newbuild__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
 
 .card__tag {
   display: block;
   text-align: center;
   width: 63px;
   padding: 10px 0;
-  position: relative;
+  position: relative; }
+
+.catalog__item .card__tag {
   background: #212121; }
-  .card__tag:nth-of-type(even) {
+  .catalog__item .card__tag:nth-of-type(even) {
     background: #282828; }
 
 .tulip {
@@ -3346,6 +3348,7 @@ footer ~ .newbuild__list {
   position: absolute;
   right: 0;
   top: -40px;
+  z-index: 2;
   margin: 0;
   width: 0;
   -webkit-transition: 0.3s;
