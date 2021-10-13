@@ -112,6 +112,10 @@
      });
   }
 
+  $('.card__tag').on('click', function(e) {
+    e.preventDefault();
+  });
+
   //Languige change
     $('.menu__lang-item').on('click', function() {
       $('.menu__lang-item').removeClass('active')
