@@ -11,6 +11,7 @@ npm-debug.*
 build/
 Reserv/
 res/
+pug/
 source/
 Thumbs.db
 .editorconfig
