@@ -25,6 +25,7 @@
       $('.filter').removeClass('open');
       $('footer ~ .newbuild__list').removeClass('open');
       $('.menu__item').removeClass('active');
+      $('body').removeAttr('style');
     } else {
       $(this).addClass('open');
       $('.menu').slideDown(200);
@@ -47,9 +48,11 @@
     if(href === 'newbuild-grid.html') {
       $('.filter').addClass('filter--newbuild');
       $('footer ~ .newbuild__list').addClass('open');
+      $('body').css('overflow', 'hidden');
     } else {
       $('.filter').removeClass('filter--newbuild');
       $('footer ~ .newbuild__list').removeClass('open');
+      $('body').removeAttr('style');
     }
   });
 
@@ -57,12 +60,14 @@
     $('footer ~ .newbuild__list').removeClass('open');
     $('.filter').removeClass('open');
     $('.menu__item--filter').removeClass('active');
+    $('body').removeAttr('style');
   });
 
   $('.header__right').on('click', function() {
     $('footer ~ .newbuild__list').removeClass('open');
     $('.filter').removeClass('open');
     $('.menu__item--filter').removeClass('active');
+    $('body').removeAttr('style');
   });
 
   $('.type__radio').on('click', function() {
