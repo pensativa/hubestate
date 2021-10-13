@@ -2156,7 +2156,7 @@ template {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  max-width: calc(100% - 142px - 105px);
+  max-width: 100%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start; }
