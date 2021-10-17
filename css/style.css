@@ -556,7 +556,7 @@ template {
   padding: 25px 0 0;
   text-align: center;
   z-index: 13;
-  min-height: 843px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -596,7 +596,7 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 843px; }
+  height: 100%; }
   .header__right.open {
     width: calc(100% - 135px);
     background: rgba(0, 0, 0, 0.5) url("../img/bg-menu.svg") no-repeat center/cover;
@@ -937,6 +937,38 @@ template {
       vertical-align: bottom; }
     #left-menu__toggle.open::before {
       background-image: url("../img/cross.png"); }
+
+.left-menu__nav {
+  max-height: 85%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+
+.menu {
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.menu__item {
+  height: 25%; }
+
+.menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 @media (max-height: 842px) and (min-width: 850px) {
   .menu__icon {
@@ -2805,7 +2837,7 @@ template {
   padding: 10px 0 15px;
   color: #fff;
   width: 286px;
-  min-height: 843px;
+  height: 100%;
   -webkit-transform: translateY(-300%);
           transform: translateY(-300%);
   -webkit-transition: 0.5s;
@@ -2825,7 +2857,7 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 818px;
+  height: 100%;
   text-align: left;
   max-height: 98vh; }
 
@@ -3081,7 +3113,7 @@ footer ~ .newbuild__list {
   right: 120px;
   width: calc(100% - 255px - 286px);
   z-index: 20;
-  max-height: 843px;
+  height: 100%;
   scrollbar-width: none;
   -ms-overflow-style: none;
   overflow-y: scroll;
@@ -3109,6 +3141,18 @@ footer ~ .newbuild__list {
 
 .mob-newbuild {
   display: none; }
+
+@media (min-height: 1080px) {
+  .filter__form {
+    font-size: 20px; }
+  .filter__input {
+    height: 80px;
+    padding: 25px; }
+  .filter__title {
+    font-size: 20px; }
+  .price input[type="radio"]:checked + label, .price input[type="radio"]:not(:checked) + label, .squere input[type="radio"]:checked + label, .squere input[type="radio"]:not(:checked) + label {
+    color: #5F5F5F;
+    font-size: 18px; } }
 
 @media (max-height: 900px) and (min-width: 850px) {
   .filter, .filter__form {
