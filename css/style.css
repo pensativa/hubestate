@@ -938,37 +938,35 @@ template {
     #left-menu__toggle.open::before {
       background-image: url("../img/cross.png"); }
 
-.left-menu__nav {
-  max-height: 85%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
-
-.menu {
-  height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-
-.menu__item {
-  height: 25%; }
-
-.menu__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+@media (min-height: 920px) {
+  .left-menu__nav {
+    max-height: 85%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+  .menu {
+    height: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .menu__item {
+    height: 25%; }
+  .menu__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 @media (max-height: 842px) and (min-width: 850px) {
   .menu__icon {
@@ -3156,7 +3154,7 @@ footer ~ .newbuild__list {
 
 @media (max-height: 900px) and (min-width: 850px) {
   .filter, .filter__form {
-    min-height: 100%; }
+    height: auto; }
   .type input[type="radio"]:checked,
   .type input[type="radio"]:not(:checked) {
     height: 55px; }
@@ -3177,7 +3175,7 @@ footer ~ .newbuild__list {
 
 @media (max-height: 768px) and (min-width: 850px) {
   .filter, .filter__form {
-    min-height: 100%; }
+    height: auto; }
   .filter__fieldset.type {
     margin-bottom: 5px; }
   .type input[type="radio"]:checked,
@@ -3272,9 +3270,9 @@ footer ~ .newbuild__list {
     left: 0;
     width: 100%;
     margin: 0;
-    min-height: auto; }
+    height: auto; }
   .filter__form {
-    min-height: auto;
+    height: auto;
     text-align: center; }
   footer ~ .newbuild__list {
     position: absolute;
