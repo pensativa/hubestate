@@ -626,7 +626,7 @@ template {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 20px;
+    padding: 20px 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -659,7 +659,8 @@ template {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-height: auto; }
+    min-height: auto;
+    padding-left: 20px; }
     .header__left > a {
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
@@ -1019,7 +1020,8 @@ template {
   #menu__toggle {
     -webkit-transform: rotate(0);
             transform: rotate(0);
-    font-size: 17px; }
+    font-size: 17px;
+    padding-right: 20px; }
     #menu__toggle img {
       max-width: 22px;
       max-height: 22px; }
@@ -1031,10 +1033,11 @@ template {
     overflow: visible; }
     .header__right.open .header-menu {
       position: absolute;
-      top: 40px;
+      top: 53px;
       width: 100vw;
-      right: -20px;
+      right: 0;
       padding: 10px 20px 100px;
+      margin: 0;
       -webkit-backdrop-filter: blur(30px);
               backdrop-filter: blur(30px);
       background: rgba(0, 0, 0, 0.8) url("../img/bg-menu.svg") no-repeat center/cover; }
