@@ -4056,13 +4056,23 @@ footer ~ .newbuild__list {
   .list-more__item {
     width: 49%;
     margin-bottom: 1%; }
+    .list-more__item img {
+      width: 100%; }
     .list-more__item .title {
       font-size: 9px; }
     .list-more__item .value {
       font-size: 12px;
       margin-bottom: 8px; }
     .list-more__item .list-more__text {
-      padding-left: 6px; } }
+      padding-left: 6px; }
+  .button--var {
+    font-size: 20px;
+    bottom: -34px; }
+    .button--var.button--var::after {
+      width: 22px;
+      height: 22px;
+      vertical-align: baseline;
+      margin-bottom: -4px; } }
 
 .breadcrumb {
   display: -webkit-box;
